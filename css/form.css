@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+body, html{
+    scroll-behavior: smooth;
+}
+
+.landing-page{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+}
+
+.bg-image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    clip-path: none;
+    z-index: 1;
+}
+
+.responsive-icon{
+    display: none;
+}
+
+
+.bg-image::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg,#212121,transparent);
+    left: 0;
+}
+
+.bg-image .text{
+    position: absolute;
+    left: 50%;
+    bottom: 40%;
+    transform: translate(-100%);
+z-index: 12;
+color: #fff;
+max-width: 650px;
+margin-left: 20px;
+}
+
+.text p{
+    font-size: 13px;
+}
+.bg-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.form-container{
+    max-width: 800px;
+    max-height: 800px;
+    height: auto;
+    width: 500px;
+    border: 1px solid #B3B6B7;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 2;
+    background-color: #fff;
+}
+
+form{
+    width: 100%;
+    padding: 10px 10px;
+    height: 100%;
+}
+
+.form-next-btn button{
+    width: 100%;
+    background-color: #536DFE;
+    height: 50px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+.second-step-form-button button{
+    background-color: #536DFE;
+    height: 50px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;;
+color: #fff;
+}
+
+
+
+.form-next-btn .btn-second-back{
+ background-color: #B3B6B7;
+}
+
+.form-next-btn button:hover, #second-next-btn:hover{
+    background-color: #536DFE;
+    opacity: .8;
+    color: #212121;
+}
+
+#btn-second-back, #btn-back{
+    background-color: #B3B6B7;
+}
+
+#btn-second-back:hover, #btn-back:hover{
+    opacity: .8;
+    background-color: #B3B6B7;
+}
+
+fieldset legend{
+    font-weight: 600;
+}
+
+.first-step-form{
+    display: block;
+}
+
+.second-step-form{
+    display: none;
+}
+
+.third-step-form{
+    display: none;
+}
+
+.second-step-wrapper{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+
+}
+
+.second-step-wrapper fieldset{
+    height: 100%;
+    width: 100%;
+}
+
+
+.third-step-btn{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.step-row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    box-shadow: 0 -1px 5px -1px #000;
+}
+
+.step-col{
+    width: 33%;
+    text-align: center;
+    color: #212121;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.step-col i{
+    font-size: 30px;
+    color: #2ECC71;
+}
+
+.step-col .icon{
+    display: none;
+}
+
+.step-col .inactive{
+    display: none;
+}
+
+.step-col .active{
+    display: block;
+}
+
+#progress{
+    width: 33%;
+    height: 100%;
+    position: absolute;
+    background-color: #536DFE;
+    transition: 1s;
+}
+
+#progress::after{
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    position: absolute;
+    right: -20px;
+    border-left: 20px solid #536DFE;
+    top: 0;
+    z-index: 2;
+}
+
+.privacy{
+    height: 200px;
+    max-height: 200px;
+    overflow-y: scroll;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+@media all and (max-width: 1200px) {
+    body{
+        height: auto;
+        width: 100%;
+    }
+
+    .landing-page{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .form-container{
+        margin: 0px;
+    }
+    .form-container{
+        max-width: none;
+        max-height: none;
+        border: none;
+        border-radius: 0px;
+        overflow: hidden;
+        height: 100vh;
+        box-shadow: none;
+        background-color: #fff;
+        padding-top: 20px;
+    }
+
+   
+
+    .step-row{
+        box-shadow: none;
+    }
+
+    .form-container  input, .form-container select{
+        background-color: #F0F3F4;
+    }
+
+    .bg-image{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        clip-path: none;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bg-image .text{
+        position: absolute;
+        left: 0%;
+        transform: translate(0%);
+    z-index: 12;
+    color: #fff;
+    max-width: none;
+    padding: 20px 20px;
+    text-align: center;
+    margin-left: 0px;
+    width: 100%;
+    }
+
+    .responsive-icon{
+        display: block;
+        font-size: 40px;
+        color: #536DFE;
+    }
+}
+
+
+@media all and (max-width:800px) {
+    .form-container{
+        max-width: none;
+        max-height: none;
+        height: 100vh;
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        overflow: hidden;
+        padding-top: 0px;
+    }
+
+    .bg-image{
+        display: flex;
+        justify-content: center;
+    }
+
+    .bg-image .text{
+    margin-left: 0px;
+    }
+    
+}
+
+@media all and (max-width:500px) {
+    .step-col{
+        width: 33%;
+        text-align: center;
+        color: #212121;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+    }
+    
+    #progress{
+        width: 33%;
+        height: 100%;
+        position: absolute;
+        background-color: #536DFE;
+        transition: 1s;
+    }
+}
+
+@media all and (max-width:350px) {
+    .row > div{
+        height: 50px;
+    }
+
+    fieldset > div{
+        height: 50px;
+        padding: 0px;
+    }
+
+    fieldset .col-form-label{
+        font-size: 13px;
+    }
+
+    fieldset label{
+        font-size: 11px;
+    }
+
+    .form-container{
+       overflow-y: scroll;
+    }
+
+    .step-row{
+       position: sticky;
+       top: 0;
+       background-color: #fff;
+       z-index: 10;
+    }
+
+   .privay-agree label{
+    font-size: 9px;
+   }
+}
