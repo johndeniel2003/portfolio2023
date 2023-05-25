@@ -1,0 +1,80 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap');
+@import "landingPage.css";
+@import "body.css";
+@import "aboutUs.css";
+@import "project.css";
+@import "responsive.css";
+@import "footer.css";
+@import "service.css";
+/* ENDS */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body , html{
+  scroll-behavior: smooth;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+:root{
+    --primary-color: #212121;
+    --secondary-color: #ffff;
+    --third-color: #0d6efd;
+    --primary-border-radius: 5px;
+    --primary-font-size: 13px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #212121;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent,#0d6efd);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/* CUSTOM CURSOR */
+
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #0d6efd;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    z-index: 11;
+    transition: .1s;
+}
+
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid #0d6efd;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    z-index: 11;
+    transition: .15s;
+}
+
+

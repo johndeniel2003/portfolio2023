@@ -1,0 +1,153 @@
+.services-container{
+    height: 120vh;
+    width: 100%;
+    overflow: hidden;
+  padding: 0px 0px;
+}
+
+.services-wrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel{
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-inner{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-inner::after{
+    position: absolute;
+    content: '';
+    background: linear-gradient(0deg,#212121,transparent);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.carousel-item{
+    height: 100%;
+    width: 100%;
+    transition: .6s;
+}
+.carousel-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.right-text{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.right-text h3{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #DEE4E7;
+    transform: rotate(-90deg);
+}
+
+.carousel-indicators-service{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+
+.indicator-wrapper > .service-descript{
+    height: 150px;
+    width: 150px;
+    margin: 5px 5px;
+    transition: .6s;
+    position: relative;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: none;
+}
+
+.service-descript h3{
+    position: absolute;
+    cursor: pointer;
+    font-size: 12px;
+    height: 100%;
+    text-align: center;
+    padding: 20px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+.service-descript .service-card{
+    height: 100%;
+    width: 100%;
+    padding: none;
+    margin: none;
+    border: 1px solid #DEE4E7;
+    background: none;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.service-descript .active{
+    border-radius: 3px;
+    background: rgba(44, 107, 243, 0.774);
+    opacity: 1;
+}
+
+.carousel-text{
+    text-align: start;
+    display: flex;
+    justify-content: start;
+    margin-left: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.carousel-text h3{
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.indicator-wrapper{
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+
+.service-logo{
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    width: 150px;
+    height: 150px;
+    z-index: 4;
+}

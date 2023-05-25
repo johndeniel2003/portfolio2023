@@ -1,0 +1,417 @@
+.landing-page{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-container{
+    width: 100%;
+    height: 50px;
+display: flex;
+justify-content: center;
+position: sticky;
+top: 0;
+z-index: 10;
+padding: 10px 10px;
+background-color: #212121;
+}
+
+.team-logo > a img{
+    height: 30px;
+    width: 30px;
+}
+
+.burger-menu{
+display: none;
+}
+
+#close-menu{
+  display: none;
+}
+
+.navbar-container > ul{
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+   height: 100%;
+  align-items: center;
+}
+
+.navbar-container > ul li a{
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: 500;
+   font-size: var(--primary-font-size);
+   letter-spacing: 1px;
+   color: var(--secondary-color);
+    transition: .2s;
+  }
+
+.navbar-container > ul li a:hover{
+  color: #0d6efd;
+}
+
+
+.navbar-container > ul li{
+ list-style: none;
+}
+
+.dropdown-container{
+    position: relative;
+}
+
+.AboutUs-dropdown{
+  height: 120px;
+  border-left: 1px solid #0d6efd;
+  overflow: hidden;
+  position: relative;
+  background-color: #212121;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 120px;
+}
+
+
+
+
+.AboutUs-dropdown > ul{
+display: flex;
+flex-direction: column;
+align-items: start;
+font-size: var(--primary-font-size);
+
+}
+
+.AboutUs-dropdown ul li{
+  padding-top: 10px;
+  position: relative;
+}
+
+.AboutUs-dropdown ul .name-deniel::after{
+position: absolute;
+content: '';
+height: 20px;
+width: 35%;
+border-bottom: 1px solid #0d6efd;
+left: -40%;
+top: 0;
+border-bottom-left-radius: 60px;
+}
+
+.AboutUs-dropdown ul .name-frenand::after{
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 35%;
+  border-bottom: 1px solid #0d6efd;
+  left: -40%;
+  top: 0;
+  border-bottom-left-radius: 60px;
+  }
+
+
+  .AboutUs-dropdown ul .name-jeselle::after{
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 35%;
+    border-bottom: 1px solid #0d6efd;
+    left: -40%;
+    top: 0;
+    border-bottom-left-radius: 60px;
+    }
+
+
+.dropdown-container > .AboutUs-dropdown{
+    position: absolute;
+    width: 200px;
+    top: 90%;
+    left: 7%;
+    padding: 10px 0px;
+    transition: .6s;
+    display: none;
+}
+
+#iconDown{
+    transition: .6s;
+}
+
+
+.dropdown-container:hover > .AboutUs-dropdown{
+  display: block;
+}
+
+.dropdown-container:hover  i{
+    transform: rotateX(-175deg);
+  }
+
+  /* NAVBAR ENDS */
+
+  /* LANDING PAGE CONTENT AREA*/
+  .landing-page-contents{
+    width: 100%;
+    height: 100%;
+display: flex;
+justify-content: space-between;
+  }
+
+  .team-BG{
+position: absolute;
+height: 100vh;
+width: 100%;
+top: 0;
+clip-path: polygon(0 0, 91% 0, 46% 100%, 0% 100%);
+z-index: -1;
+  }
+
+  .team-BG img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .team-BG::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(35deg,#212121,transparent);
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .ourPic .filter-pic{
+   height: 100%;
+   width: 100%; 
+   object-fit: cover;
+   position: absolute;
+   transition: .3s;
+   top: -10%;
+  }
+
+.ourPic #denielPic{
+  left: -30%;
+}
+
+
+.ourPic #frenandPic{
+  right: -20%;
+}
+
+
+.memberFocused{
+  filter: grayscale(0);
+}
+
+.memberNotFocused{
+  filter:  grayscale(1);
+}
+
+
+  .ourPic{
+  height: 90%;
+  width: 40%;
+  position: relative;
+  z-index: 3;
+  }
+
+  .ourPic img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 3;
+    }
+
+
+
+  .ourPic::after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(0deg,#FFFf,transparent);
+    bottom: 10%;
+    z-index: 4;
+    right: 0%;
+  }
+  
+.ourPic > #ourPic-logo{
+  position: absolute;
+right: 50%;
+bottom: 30%;
+transform: translate(50%,50%);
+  height: 200px;
+  width: 200px;
+  z-index: 3;
+}
+  
+.teamIntro{
+z-index: 1;
+height: 220px;
+width: 500px;
+padding-left: 10px;
+position: relative;
+display: flex;
+flex-direction: row;
+transition: .3s;
+align-self: center;
+margin-left: 40px;
+}
+.teamIntro .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
+}
+
+.teamIntro .heading{
+  position: relative;
+  font-family: 'Castoro Titling';
+}
+
+
+
+.teamIntro .heading .floating-text{
+  position: absolute;
+  top: -30%;
+  left: 0%;
+font-weight: 600;
+font-size: 20px;
+}
+
+.heading h4{
+display: inline-flex;
+margin: 0;
+vertical-align: top; 
+margin-bottom:10px;
+}
+
+.heading h4 .word{
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+
+.heading h4 .word .letter{
+  transform-origin: center center 25px;
+}
+
+.heading h4 .word .letter.out{
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.heading h4 .word .letter.in{
+transition:  0.8s ease;
+}
+
+.heading h4 .word .letter.behind{
+  transform: rotateX(-90deg);
+}
+
+.teamIntro .heading h1{
+  color: var(--secondary-color);
+  font-weight: 800;
+  letter-spacing: 1px;
+  }
+
+  .teamIntro .heading h4{
+    color: var(--secondary-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    }
+
+    .teamIntro .descript p{
+      color: var(--secondary-color);
+      font-size: 14px;
+      }
+
+
+.landing-page-contents > .icon{
+position: absolute;
+height: 50px;
+width: 50px;
+z-index: 4;
+opacity: .8;
+}
+
+.landing-page-contents > .element1{
+  top: 15%;
+  right: 17%;
+}
+
+.landing-page-contents > .element2{
+  bottom: 10%;
+  right: 20%;
+}
+
+.landing-page-contents > .element3{
+  top: 50%;
+  width: 100px;
+  right: 36%;
+}
+
+.landing-page-contents > .element4{
+  top: 40%;
+  right: 3%;
+  z-index: -1;
+}
+
+.get-started-button{
+  padding: 5px 40px;
+text-align: end;
+border-radius: 20px;
+position: relative;
+transition: .5s;
+overflow: hidden;
+}
+
+.get-started-button:hover > .circle{
+width: 100%;
+border-radius: 20px;
+}
+
+.circle{
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #0d6efd;
+  transition: .5s;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle i{
+  color: #fff;
+}
+
+.get-started-button:hover > .circle i{
+ margin-right: 15px;
+ color: #212121;
+   }
+
+.get-started-button:hover > .circle{
+  justify-content: end;
+   }
+
+.get-started-button .txt{
+  color: #fff;
+  margin-left: 10px;
+  letter-spacing: 1px;
+  transition: .5s;
+}
+
+.get-started-button:hover > .txt{
+ z-index: 2;
+ color: #212121;
+  }
+
+ 
