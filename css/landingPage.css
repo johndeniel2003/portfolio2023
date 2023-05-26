@@ -169,6 +169,8 @@ z-index: -1;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
   }
 
   .team-BG::after{
@@ -314,6 +316,7 @@ transition:  0.8s ease;
 .teamIntro .heading h1{
   color: var(--secondary-color);
   font-weight: 800;
+  font-family: Cinzel Decorative;
   letter-spacing: 1px;
   }
 
