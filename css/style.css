@@ -97,12 +97,9 @@ body::-webkit-scrollbar-thumb {
     height: 110px;
   }
   
-.loader h1{
-    font-family: Cinzel Decorative;
-    color: #dedede;
-    font-weight: 600;
-    -webkit-text-fill-color: transparent;
--webkit-text-stroke-width: 2px;
+.loader img{
+  height: 80px;
+  width: 80px;
 }
 
   .loader:before , .loader:after{
