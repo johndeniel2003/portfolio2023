@@ -5,7 +5,10 @@ import { imageSelector } from "./imageSelector.js";
 import { filter as filterImages } from "./filter.js";
 import { textAnimation } from "./textAnimation.js";
 import { customCursor } from "./customCursor.js";
+import loading from "./loader.js";
 
+// FOR LOADING SCREEN
+loading();
 
 //FOR MOVING ICONS
 parallaxIcons();
