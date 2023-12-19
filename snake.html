@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Snake HTML Game</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    canvas {
+      border: 2px solid white;
+      image-rendering: crisp-edges;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="400" id="game"></canvas>
+  <script>
+    var gameCanvas = document.getElementById('game');
+    var gameContext = gameCanvas.getContext('2d');
+
+    var grid = 16;
+    var count = 0;
+
+    var snake = {
+      x: 160,
+      y: 160,
+      dx: grid,
+      dy: 0,
+      cells: [],
+      maxCells: 4
+    };
+
+    var apple = {
+      x: 320,
+      y: 320
+    };
+
+    function getRandomIntInRange(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function updateSnake() {
+      snake.x += snake.dx;
+      snake.y += snake.dy;
+
+      if (snake.x < 0) {
+        snake.x = gameCanvas.width - grid;
+      } else if (snake.x >= gameCanvas.width) {
+        snake.x = 0;
+      }
+
+      if (snake.y < 0) {
+        snake.y = gameCanvas.height - grid;
+      } else if (snake.y >= gameCanvas.height) {
+        snake.y = 0;
+      }
+
+      snake.cells.unshift({x: snake.x, y: snake.y});
+
+      if (snake.cells.length > snake.maxCells) {
+        snake.cells.pop();
+      }
+    }
+
+    function drawSnake() {
+      gameContext.fillStyle = 'green';
+      snake.cells.forEach(function(cell) {
+        gameContext.fillRect(cell.x, cell.y, grid - 1, grid - 1);
+      });
+    }
+
+    function handleCollisions() {
+      gameContext.fillStyle = 'red';
+      gameContext.fillRect(apple.x, apple.y, grid - 1, grid - 1);
+
+      snake.cells.forEach(function(cell, index) {
+        if (cell.x === apple.x && cell.y === apple.y) {
+          snake.maxCells++;
+          apple.x = getRandomIntInRange(0, 25) * grid;
+          apple.y = getRandomIntInRange(0, 25) * grid;
+        }
+
+        for (var i = index + 1; i < snake.cells.length; i++) {
+          if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+            resetGame();
+          }
+        }
+      });
+    }
+
+    function handleInput(e) {
+      if (e.which === 37 && snake.dx === 0) {
+        snake.dx = -grid;
+        snake.dy = 0;
+      } else if (e.which === 38 && snake.dy === 0) {
+        snake.dy = -grid;
+        snake.dx = 0;
+      } else if (e.which === 39 && snake.dx === 0) {
+        snake.dx = grid;
+        snake.dy = 0;
+      } else if (e.which === 40 && snake.dy === 0) {
+        snake.dy = grid;
+        snake.dx = 0;
+      }
+    }
+
+    function resetGame() {
+      snake.x = 160;
+      snake.y = 160;
+      snake.cells = [];
+      snake.maxCells = 4;
+      snake.dx = grid;
+      snake.dy = 0;
+
+      apple.x = getRandomIntInRange(0, 25) * grid;
+      apple.y = getRandomIntInRange(0, 25) * grid;
+    }
+
+    function initGame() {
+      document.addEventListener('keydown', handleInput);
+      requestAnimationFrame(loop);
+    }
+
+    function loop() {
+      requestAnimationFrame(loop);
+
+      if (++count < 4) {
+        return;
+      }
+
+      count = 0;
+      gameContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+      updateSnake();
+      drawSnake();
+      handleCollisions();
+    }
+
+    initGame();
+  </script>
+</body>
+</html>
