@@ -1,5 +1,5 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Cinzel+Decorative:wght@400;700;900&family=Monoton&family=Poppins:wght@400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap');
 @import "landingPage.css";
 @import "body.css";
 @import "aboutUs.css";
@@ -77,44 +77,4 @@ body::-webkit-scrollbar-thumb {
     transition: .15s;
 }
 
-.screenLoader{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    background-color: #212121;
-    position: fixed;
-}
 
-.loader {
-    position: relative;
-    width: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 110px;
-  }
-  
-.loader img{
-  height: 80px;
-  width: 80px;
-}
-
-  .loader:before , .loader:after{
-    content: '';
-    border-radius: 50%;
-    position: absolute;
-    inset: 0;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
-  }
-  .loader:after {
-    box-shadow: 0 2px 0 #0d6efd inset;
-    animation: rotate 2s linear infinite;
-  }
-  
-  @keyframes rotate {
-    0% {  transform: rotate(0)}
-    100% { transform: rotate(360deg)}
-  }

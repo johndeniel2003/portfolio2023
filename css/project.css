@@ -1,5 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Cinzel+Decorative:wght@400;700;900&family=Monoton&family=Poppins:wght@400;500;700;800;900&display=swap');
 .projects{
     height: auto;
     width: 100%;
@@ -22,7 +20,6 @@
     font-size: 25px;
     position: relative;
     padding-bottom: 10px;
-    font-family: Cinzel Decorative;
 }
 
 .project-header h1::after{
@@ -43,7 +40,6 @@ filter: drop-shadow(0 0 0.5em #0d6efd);
     height: auto;
     width: 100%;
     margin-top: 140px;
-    position: relative;
 }
 
 .project-wrapper{
@@ -166,40 +162,6 @@ filter: drop-shadow(0 0 0.5em #0d6efd);
 
 .view-project button{
     width: 40%;
-}
-
-
-.third-project{
-    position: relative;
-}
-
-.third-project .project-image{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.third-project .project-image::after{
-    bottom: 0;
-    position: absolute;
-    content: '';
-    height: 20px;
-    width: 80%;
-    left: 45%;
-    transform: translate(-50%,-50%);
-    background: rgb(0,0,0,0.3);
-    filter: blur(10px);
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.third-project .project-image img{
-    height: 250px;
-    width: 200px;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 
